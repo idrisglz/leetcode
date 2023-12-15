@@ -8,13 +8,26 @@ func main() {
 	fmt.Println(twoSum([]int{3, 3}, 6))
 }
 
-func twoSum(nums []int, target int) (indices []int) {
-	for i, num := range nums {
+// Memory efficient
+func twoSum(nums []int, target int) []int {
+	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {
-			if num+nums[j] == target {
-				indices = append(indices, i, j)
+			if nums[i]+nums[j] == target {
+				return []int{i, j}
 			}
 		}
 	}
-	return indices
+	return []int{}
+}
+
+// Compute efficient
+func twoSum2(nums []int, target int) []int {
+	seen := make(map[int]int)
+	for index, num := range nums {
+		if seenIndex, ok := seen[target-num]; ok {
+			return []int{seenIndex, index}
+		}
+		seen[num] = index
+	}
+	return []int{}
 }
