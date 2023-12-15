@@ -1,8 +1,9 @@
 go 1.21.1
 
 use (
-    ./01-two-sum/go
-    ./02-add-two-numbers/go
-    ./13-roman-to-integer/go
-    ./37-sudoku-solver/go
+	./01-two-sum/go
+	./02-add-two-numbers/go
+	./09-palindrome-number/go
+	./13-roman-to-integer/go
+	./37-sudoku-solver/go
 )
