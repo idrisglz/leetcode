@@ -6,4 +6,5 @@ use (
 	./09-palindrome-number/go
 	./13-roman-to-integer/go
 	./37-sudoku-solver/go
+    ./42-trapping-rain-water/go
 )
