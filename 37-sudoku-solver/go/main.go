@@ -16,15 +16,15 @@ func main() {
 	solveSudoku(board)
 }
 
-func isEligible(board [][]byte, row, col int, num byte) bool {
-	for x := 0; x < 9; x++ {
-		if board[row][x] == num {
+func isValid(board [][]byte, row, col int, num byte) bool {
+	for i := 0; i < 9; i++ {
+		if board[row][i] == num {
 			return false
 		}
-		if board[x][col] == num {
+		if board[i][col] == num {
 			return false
 		}
-		if board[3*(row/3)+x/3][3*(col/3)+x%3] == num {
+		if board[3*(row/3)+i/3][3*(col/3)+i%3] == num {
 			return false
 		}
 	}
@@ -32,29 +32,22 @@ func isEligible(board [][]byte, row, col int, num byte) bool {
 }
 
 func solveSudoku(board [][]byte) bool {
-	row, col := -1, -1
-	isComplete := false
-outer_loop:
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
 			if board[i][j] == '.' {
-				row, col = i, j
-				isComplete = true
-				break outer_loop
+				for num := byte('1'); num <= byte('9'); num++ {
+					if isValid(board, i, j, num) {
+						board[i][j] = num
+						if solveSudoku(board) {
+							return true
+						}
+						board[i][j] = '.'
+					}
+				}
+				return false
 			}
 		}
 	}
-	if !isComplete {
-		return true
-	}
-	for num := byte('1'); num <= byte('9'); num++ {
-		if isEligible(board, row, col, num) {
-			board[row][col] = num
-			if solveSudoku(board) {
-				return true
-			}
-			board[row][col] = '.'
-		}
-	}
-	return false
+	return true
+
 }
