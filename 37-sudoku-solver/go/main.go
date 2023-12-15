@@ -49,5 +49,4 @@ func solveSudoku(board [][]byte) bool {
 		}
 	}
 	return true
-
 }
