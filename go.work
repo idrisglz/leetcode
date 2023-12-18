@@ -7,4 +7,5 @@ use (
 	./13-roman-to-integer/go
 	./37-sudoku-solver/go
     ./42-trapping-rain-water/go
+    ./20-valid-parentheses/go
 )
