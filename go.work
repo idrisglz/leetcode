@@ -5,6 +5,7 @@ use (
 	./02-add-two-numbers/go
 	./09-palindrome-number/go
 	./13-roman-to-integer/go
+    ./14-longest-common-prefix/go
 	./37-sudoku-solver/go
     ./42-trapping-rain-water/go
     ./20-valid-parentheses/go
