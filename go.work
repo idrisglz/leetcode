@@ -1,4 +1,4 @@
-go 1.21.1
+go 1.21.5
 
 use (
 	./01-two-sum/go
@@ -11,4 +11,6 @@ use (
     ./20-valid-parentheses/go
     ./70-climbing-stairs/go
     ./35-search-insert-position/go
+    ./169-majority-element/go
+    ./136-single-number/go
 )
