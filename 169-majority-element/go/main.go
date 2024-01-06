@@ -8,16 +8,14 @@ func main() {
 }
 
 func majorityElement(nums []int) int {
-	var elementCounts = map[int]int{}
+	counts := make(map[int]int)
 
 	for _, num := range nums {
-		elementCounts[num]++
-	}
+		counts[num]++
 
-	for key, value := range elementCounts {
-		if value > len(nums)/2 {
-			return key
+		if counts[num] > len(nums)/2 {
+			return num
 		}
 	}
-	return 0
+	return -1
 }
