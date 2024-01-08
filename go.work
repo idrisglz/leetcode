@@ -11,6 +11,7 @@ use (
     ./20-valid-parentheses/go
     ./70-climbing-stairs/go
     ./35-search-insert-position/go
-    ./169-majority-element/go
+    ./112-path-sum/go
     ./136-single-number/go
+    ./169-majority-element/go
 )
