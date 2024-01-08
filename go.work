@@ -4,14 +4,15 @@ use (
 	./01-two-sum/go
 	./02-add-two-numbers/go
 	./09-palindrome-number/go
+	./112-path-sum/go
 	./13-roman-to-integer/go
-    ./14-longest-common-prefix/go
+	./136-single-number/go
+	./14-longest-common-prefix/go
+	./169-majority-element/go
+	./20-valid-parentheses/go
+	./21-merge-two-sorted-lists/go
+	./35-search-insert-position/go
 	./37-sudoku-solver/go
-    ./42-trapping-rain-water/go
-    ./20-valid-parentheses/go
-    ./70-climbing-stairs/go
-    ./35-search-insert-position/go
-    ./112-path-sum/go
-    ./136-single-number/go
-    ./169-majority-element/go
+	./42-trapping-rain-water/go
+	./70-climbing-stairs/go
 )
